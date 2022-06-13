@@ -1,6 +1,6 @@
 <?php
 
-namespace Kingdeephp\K3cloud\Core;
+namespace Bnyx\K3cloudHyperf\Core;
 
 use Kingdeephp\K3cloud\Traits\HttpClientTraits;
 

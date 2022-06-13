@@ -1,10 +1,10 @@
 <?php
 
-namespace Kingdeephp\K3cloud;
+namespace Bnyx\K3cloudHyperf;
 
-use Kingdeephp\K3cloud\Consts\ApiPathConst;
-use Kingdeephp\K3cloud\Consts\ApiAuthTypeConst;
-use Kingdeephp\K3cloud\Core\WebApiClient;
+use Bnyx\K3cloudHyperf\Consts\ApiPathConst;
+use Bnyx\K3cloudHyperf\Consts\ApiAuthTypeConst;
+use Bnyx\K3cloudHyperf\Core\WebApiClient;
 
 class K3CloudApiSdk
 {
