@@ -22,7 +22,6 @@ class WebApiClient
             $res = $response->getBody()->getContents();
         } catch (\Throwable $exception) {
             print_r($exception->getMessage());
-            die;
         }
         return $format == 'string' ? $res : json_decode($res, true);
     }
