@@ -2,7 +2,7 @@
 
 namespace Bnyx\K3cloudHyperf\Core;
 
-use Kingdeephp\K3cloud\Traits\HttpClientTraits;
+use Bnyx\K3cloudHyperf\Traits\HttpClientTraits;
 
 class WebApiClient
 {
