@@ -28,7 +28,7 @@ $config = [
     'appsecret' => 'xxxxxxxxxx', // 应用Secret（授权类型为2或3时必须）
     'lcid' => 2052, // 账套语系，默认2052
 ];
-$server = new \Kingdeephp\K3cloud\K3CloudApiSdk($config);
+$server = new \Bnyx\K3cloudHyperf\K3CloudApiSdk($config)
 
 //返回值格式 可不传 默认string 所有接口通用
 $format = 'string';
