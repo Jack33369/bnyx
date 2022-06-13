@@ -9,7 +9,7 @@ Continue to improve
 Via Composer
 
 ``` bash
-$ composer require kingdee-php/k3cloud
+$ composer require bnyx/k3cloud-hyperf
 ```
 
 ## Usage (API)
