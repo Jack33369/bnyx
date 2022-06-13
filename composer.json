@@ -1,0 +1,22 @@
+{
+  "name": "bnyx/k3cloud-hyperf",
+  "description": "This is KingDee PHP SDK",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Kingdeephp\\K3cloud\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "",
+      "email": ""
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php" : ">=7.4",
+    "guzzlehttp/guzzle": "^7.0"
+  }
+}
