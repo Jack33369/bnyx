@@ -14,23 +14,18 @@ class WebApiClient
      * @param $postData
      * @param $format
      * @return mixed
-     * @throws \Exception
      */
     public function execute($url, $headers, $postData, $format)
     {
         $headers = $this->defaultHeaders + $headers;
-        try {
-            $response = $this->httpClient->post(
-                $url,
-                $this->defaultGuzzleOption + [
-                    'headers' => $headers,
-                    'json' => $postData
-                ]
-            );
-            $res = $response->getBody()->getContents();
-        } catch (\Throwable $exception) {
-            throw new \Exception($exception->getMessage(), 400);
-        }
+        $response = $this->httpClient->post(
+            $url,
+            $this->defaultGuzzleOption + [
+                'headers' => $headers,
+                'json' => $postData
+            ]
+        );
+        $res = $response->getBody()->getContents();
         return $format == 'string' ? $res : json_decode($res, true);
     }
 
