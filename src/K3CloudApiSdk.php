@@ -37,6 +37,7 @@ class K3CloudApiSdk
     /**
      * 登录: 用户名+密码
      * @return mixed|string|void
+     * @throws \Exception
      */
     public function loginForPassword()
     {
@@ -47,12 +48,16 @@ class K3CloudApiSdk
             'password' => $this->config['password'],      // 密码
             'lcid' => $this->config['lcid'] ?? 2052,      // 语言
         ];
-        return $this->webApiClient->execute($url, [], $postData, 'string');
+        $ret = $this->webApiClient->execute($url, [], $postData, 'array');
+        if ($ret['IsSuccessByAPI'] != true) {
+            throw new \Exception("登录失败", '400');
+        }
     }
 
     /**
      * 登录: 第三方授权应用ID+应用密钥
      * @return mixed|string|void
+     * @throws \Exception
      */
     public function loginForSecret()
     {
@@ -64,7 +69,10 @@ class K3CloudApiSdk
             'appsecret' => $this->config['appsecret'],    // 应用密钥
             'lcid' => $this->config['lcid'] ?? 2052,      // 语言
         ];
-        return $this->webApiClient->execute($url, [], $postData, 'string');
+        $ret = $this->webApiClient->execute($url, [], $postData, 'array');
+        if ($ret['IsSuccessByAPI'] != true) {
+            throw new \Exception("登录失败", '400');
+        }
     }
 
     /**

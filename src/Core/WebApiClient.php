@@ -8,6 +8,14 @@ class WebApiClient
 {
     use HttpClientTraits;
 
+    /**
+     * @param $url
+     * @param $headers
+     * @param $postData
+     * @param $format
+     * @return mixed
+     * @throws \Exception
+     */
     public function execute($url, $headers, $postData, $format)
     {
         $headers = $this->defaultHeaders + $headers;
@@ -21,7 +29,7 @@ class WebApiClient
             );
             $res = $response->getBody()->getContents();
         } catch (\Throwable $exception) {
-            print_r($exception->getMessage());
+            throw new \Exception($exception->getMessage(), 400);
         }
         return $format == 'string' ? $res : json_decode($res, true);
     }
