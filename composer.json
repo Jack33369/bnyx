@@ -1,6 +1,7 @@
 {
   "name": "bnyx/k3cloud-hyperf",
   "description": "This is KingDee PHP SDK",
+  "version": "1.0.0",
   "type": "library",
   "license": "MIT",
   "autoload": {
